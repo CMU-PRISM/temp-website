@@ -1,9 +1,11 @@
 # do not add the contents of these folders
 temp-env/
 .vscode/
+vscode
 __pycache__/
 *.py[cod]
 .env
+env
 
 
 # SQLite database files
