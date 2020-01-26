@@ -11,15 +11,16 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from decouple import config, Csv
-import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+with open(os.path.join(BASE_DIR, 'secretkey.txt')) as f:
+    SECRET_KEY = f.read().strip()
+
+DEBUG = False
+ALLOWED_HOSTS = ['prism.andrew.cmu.edu', 'localhost', '127.0.0.1',]
+
 #DATABASES = {
 #    'default': dj_database_url.config(
 #        default=config('DATABASE_URL')
@@ -56,7 +57,7 @@ SESSION_COOKIE_SECURE = True
 SECURE_HSTS_SECONDS = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
@@ -129,6 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/statics/'
+STATIC_ROOT=os.path.join(BASE_DIR, 'static/')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'statics'),

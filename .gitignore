@@ -7,7 +7,9 @@ __pycache__/
 .env
 env
 
+# deployment-specific files
+secret_key.txt
 
-# SQLite database files
+# database files (should never be distributed)
 
 *.sqlite3
