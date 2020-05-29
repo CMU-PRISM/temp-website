@@ -1,15 +1,13 @@
 # do not add the contents of these folders
-temp-env/
+env/
 .vscode/
-vscode
+vscode/
+migrations/
 __pycache__/
 *.py[cod]
 .env
-env
 
-# deployment-specific files
-secret_key.txt
 
-# database files (should never be distributed)
+# SQLite database files
 
 *.sqlite3
