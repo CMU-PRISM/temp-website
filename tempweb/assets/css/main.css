@@ -1,0 +1,14 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+  }
+ 
+  .navbar-bg {
+    background: #2f394d;
+  }
+
+  .wip-message {
+    display: flex;
+
+  }
