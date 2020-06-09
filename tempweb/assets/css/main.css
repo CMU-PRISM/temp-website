@@ -1,14 +1,44 @@
 body {
     background: #fafafa;
     color: #333333;
-    margin-top: 5rem;
+    height: 100%;
   }
  
   .navbar-bg {
     background: #2f394d;
   }
 
-  .wip-message {
-    display: flex;
+  .logo {
+    width: 100%;
+    min-width: 240px;
+  }
 
+  .centered {
+    display: inline-block;
+  }
+  
+  @media (min-width: 481px){
+    .flex-adjust {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .center-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media (max-width: 480px){
+    .flex-adjust {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .center-container {
+      text-align: center;
+      padding-top: 1em;
+    }
   }

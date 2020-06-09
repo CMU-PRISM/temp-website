@@ -12,6 +12,10 @@
         <!-- Set page title according to page -->
         <title>PRISM - WIP</title>
 
+        <!-- Set favicon -->
+        <!-- TODO: rework favoicon img - too difficult to view at low resolutions -->
+        <link rel="shortcut icon" type="image/png" href="{% static 'img/prism_favicon.png' %}">
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
@@ -32,13 +36,18 @@
         </header>
         
         <!-- Page Content and Sidebar -->
-        <main role="main" class="container">
-            <div class="row" style="display: flex; justify-content: center; align-items: center; padding: 5em">
-                <!-- Main Content -->
-                <div class="col-md-8">
-                    <h1> This website is currently early in development. </h1>
-                    <p> For current information about PRISM events, going-ons, and updates, please visit our previous website
-                    at <a href='https://allies.andrew.cmu.edu'>allies.andrew.cmu.edu</a>. </p>
+        <main role="main" class="center-container">
+            <div class="centered">
+                <div class="flex-adjust">
+                    <div>
+                        <img class="logo" src="{% static 'img/prism_logo_transparent.png' a%}" alt="Scotty dog in rainbow bandana. PRISM img/prism_logo_transparent.png">
+                    </div>
+                    <!-- Main Content -->
+                    <div class="col-md-8" style="text-align:left; vertical-align: middle;">
+                        <h1> This website is currently early in development. </h1>
+                        <p> For current information about PRISM events, going-ons, and updates, please visit working website
+                        at <a href='https://allies.andrew.cmu.edu'>allies.andrew.cmu.edu</a>. </p>
+                    </div>
                 </div>
             </div>
         </main>
