@@ -18,8 +18,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 with open(os.path.join(BASE_DIR, 'secretkey.txt')) as f:
     SECRET_KEY = f.read().strip()
 
+# DEBUG should *only* be True when in development. Set this to False when shifting to production
 DEBUG = True
-ALLOWED_HOSTS = ['prism.andrew.cmu.edu', 'localhost']
+# Django needs to know what the server can be hosted on. For now, this will be the final website, the local machine, and a wild card, for debug purposes only.
+ALLOWED_HOSTS = ['prism.andrew.cmu.edu', 'localhost', "*" if DEBUG else ""]
 
 #DATABASES = {
 #    'default': dj_database_url.config(
